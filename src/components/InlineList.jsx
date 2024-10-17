@@ -7,8 +7,8 @@ export default function InlineList({ url, title, data }) {
             </div>
             <div className="inline-container-list">
                 {data}
-                <button className="scroll-to-right" onClick={(e) => { e.currentTarget.parentElement.scrollLeft -= e.currentTarget.parentElement.clientWidth }}>&lt;</button>
-                <button className="scroll-to-left" onClick={(e) => { e.currentTarget.parentElement.scrollLeft += e.currentTarget.parentElement.clientWidth }}>&gt;</button>
+                <button className="scroll-to-right" onClick={(e) => { e.currentTarget.parentElement.scrollLeft -= e.currentTarget.parentElement.clientWidth }}></button>
+                <button className="scroll-to-left" onClick={(e) => { e.currentTarget.parentElement.scrollLeft += e.currentTarget.parentElement.clientWidth }}></button>
             </div>
         </div>
     );

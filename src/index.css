@@ -482,14 +482,26 @@ button {
     width: 0;
     height: 40px;
     background: rgba(0, 0, 0, .7);
-    color: white;
-    font-family: inherit;
     border: none;
+    border-radius: 0 100% 100% 0;
     margin: 0;
     position: absolute;
     top: 53%;
     transition: all .3s;
     opacity: 0;
+}
+
+.scroll-to-right::before,
+.scroll-to-left::before {
+    content: '';
+    display: block;
+    width: 10px;
+    aspect-ratio: 1/1;
+    border: 2px solid white;
+    border-radius: 1.6px;
+    border-top: none;
+    border-right: none;
+    transform: rotate(45deg) translate(5px, -5px);
 }
 
 .inline-container-list:hover .scroll-to-left,
@@ -499,12 +511,11 @@ button {
 }
 
 .scroll-to-left {
-    border-radius: 100% 0 0 100%;
     right: 0;
+    transform: rotate(180deg);
 }
 
 .scroll-to-right {
-    border-radius: 0 100% 100% 0;
     left: 0;
 }
 
